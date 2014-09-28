@@ -4,7 +4,7 @@ angular.module('videoDisplay.services', [])
 		return {
 			update : function (id, time, action, callback) {
 				// Simple index lookup
-				var uri = "http://54.77.223.232:9000/api/things?id=" + id + "&time=" + time + "&action=" + action;
+				var uri = "http://54.171.26.12:9000/api/things?id=" + id + "&time=" + time + "&action=" + action;
 				$http.get(uri).
 				success(function (data, status, headers, config) {
 					console.log("/api/things update received");
@@ -17,7 +17,7 @@ angular.module('videoDisplay.services', [])
 			},
 			create : function (id, callback) {
 				// Simple index lookup
-				var uri = "http://54.77.223.232:9000/api/things?id=" + id;
+				var uri = "http://54.171.26.12:9000/api/things?id=" + id;
 				$http.post(uri).
 				success(function (data, status, headers, config) {
 					console.log("/api/things create cs  received");
